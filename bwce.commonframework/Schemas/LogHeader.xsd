@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/LogHeader" xmlns:tns="http://www.example.org/LogHeader" elementFormDefault="qualified">
+
+    <element name="MessageHeader" type="tns:Header"></element>
+    
+    <complexType name="Header">
+    	<sequence>
+    		<element name="ApplicationName" type="string"></element>
+    		<element name="BusinessDomain" type="string"></element>
+    		<element name="MsgType" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

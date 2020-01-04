@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Exception" xmlns:tns="http://www.example.org/Exception" elementFormDefault="qualified" xmlns:Q1="http://www.example.org/LogHeader">
+
+    <import namespace="http://www.example.org/LogHeader"></import>
+    <element name="ExceptionData" type="tns:ExceptionMessage"></element>
+    
+    <complexType name="ExceptionMessage">
+    	<sequence>
+    		<element name="MessageHeader" type="Q1:Header"></element>
+    		<element name="ServiceName" type="string"></element>
+    		<element name="ProcessName" type="string"></element>
+    		<element name="SystemHost" type="string"></element>
+    		<element name="Message" type="string"></element>
+    		<element name="Timestamp" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>
