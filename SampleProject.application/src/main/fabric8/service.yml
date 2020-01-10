@@ -13,7 +13,7 @@ spec:
     provider: fabric8
     project: bwce-sample
     group: com.tibco.bw
-  type: LoadBalancer
+  type: NodePort
   ports:
   - protocol: TCP
     port: 80

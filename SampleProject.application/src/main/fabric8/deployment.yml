@@ -14,10 +14,15 @@ spec:
       - image: vinodjadhav/sampleproject
         name: bwce-sample
         env:
-        - name: Response
+        - name: response
           value: Kubernetes
         - name: BW_PROFILE
           value: k8s
+        - name: logpayload
+          value: true
+        - name: BW_PROMETHEUS_ENABLE
+          value: TRUE
+        
         ports:
         - containerPort: 8080
   replicas: 1

@@ -5,19 +5,18 @@
   <parent>
     <groupId>com.tibco.bw</groupId>
     <artifactId>SampleProject.application.parent</artifactId>
-    <version>1.0.0.qualifier</version>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../SampleProject.application.parent</relativePath>
   </parent>
   <artifactId>SampleProject.application</artifactId>
   <packaging>bwear</packaging>
   <properties>
     <skipTests>true</skipTests>
-    <bw.Home>C:\softwares\bwce\bwce</bw.Home>
-    <docker.env.property.file>C:\Users\vjadhav\git\sample\SampleProject.application\docker-host-env-dev.properties</docker.env.property.file>
     <project.type>Docker</project.type>
+    <bw.Home>C:\softwares\bwce\bwce</bw.Home>
     <k8s.property.file>k8s-dev.properties</k8s.property.file>
-    <failIfNoTests>false</failIfNoTests>
     <docker.property.file>docker-dev.properties</docker.property.file>
+    <failIfNoTests>false</failIfNoTests>
     <tibco.Home>C:\softwares\bwce</tibco.Home>
   </properties>
   <build>
@@ -43,7 +42,6 @@
         <configuration>
           <files>
             <file>${docker.property.file}</file>
-            <file>${docker.env.property.file}</file>
             <file>${k8s.property.file}</file>
           </files>
         </configuration>
@@ -77,11 +75,6 @@
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
-                <ports>
-                  <port>${bwdocker.port.p0}</port>
-                  <port>${bwdocker.port.p1}</port>
-                </ports>
-                <envPropertyFile>${docker.env.property.file}</envPropertyFile>
               </run>
             </image>
           </images>
