@@ -59,7 +59,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//SampleProject//ResponseMsg</name>
-			<value>#Response#</value>
+			<value>#response#</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -145,7 +145,7 @@
 			<type>Boolean</type>
 			<isOverride>true</isOverride>
 			<useLookupValue>true</useLookupValue>
-			<lookupValue>false</lookupValue>
+			<lookupValue>#logpayload#</lookupValue>
 		</globalVariable>
 	</globalVariables>
 </repository>

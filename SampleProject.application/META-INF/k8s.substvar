@@ -59,7 +59,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//SampleProject//ResponseMsg</name>
-			<value>#Response#</value>
+			<value>#response#</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -139,11 +139,12 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//bwce.commonframework///CommonFramework/LogPayload</name>
-			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Boolean</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
+			<useLookupValue>true</useLookupValue>
+			<lookupValue>#logpayload#</lookupValue>
 		</globalVariable>
 	</globalVariables>
 </repository>

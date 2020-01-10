@@ -1,0 +1,28 @@
+metadata:
+  name: bwce-sample
+kind: Deployment
+spec:
+  template:
+    metadata:
+      name: bwce-sample
+      namespace: default
+      labels:
+        container: bwce-sample
+        project: bwce-sample
+    spec:
+      containers:
+      - image: vinodjadhav/sampleproject
+        name: bwce-sample
+        env:
+        - name: Response
+          value: Kubernetes
+        - name: BW_PROFILE
+          value: k8s
+        ports:
+        - containerPort: 8080
+  replicas: 1
+  selector:
+    container: bwce-sample
+    provider: fabric8
+    project: bwce-sample
+    group: com.tibco.bw
